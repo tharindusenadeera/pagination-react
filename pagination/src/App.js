@@ -1,17 +1,10 @@
-import React from "react";
-import { Pagination } from "antd";
+import React from 'react';
+import './App.css';
 
-export const PaginationComponent = (props) => {
-  const { pageSize, current, total, onChange, disable, defaultCurrent, hideOnSinglePage } = props;
-  return (
-    <Pagination
-      defaultCurrent={defaultCurrent}
-      pageSize={pageSize}
-      current={current}
-      total={total}
-      disable={disable}
-      onChange={onChange}
-      hideOnSinglePage={hideOnSinglePage}
-    />
-  );
-};
+class App extends React.Component {
+  render() {
+    return <div>{this.props.children}</div>;
+  }
+}
+
+export default App;
