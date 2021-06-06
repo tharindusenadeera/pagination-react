@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Fragment } from "react";
-import { PaginationComponent } from "./App";
 import { TestData } from "./Constants";
+import { PaginationComponent } from "./PaginationComponent";
 
 const pageSize = 5;
 
@@ -9,6 +9,7 @@ export const TableComponent = (props) => {
   const [current, setCurrent] = useState(1);
   const [minIndex, setMinIndex] = useState(0);
   const [maxIndex, setMaxIndex] = useState(0);
+  const [totalPage, setTotalPage] = useState(0);
 
   useEffect(() => {
     setTableData(TestData);
@@ -25,7 +26,7 @@ export const TableComponent = (props) => {
 
   return (
     <Fragment>
-      <table>
+      <table id="example" style={{ margin: "10px 10px 10px 10px" }}>
         <thead>
           <td>Name</td>
           <td>Value</td>
@@ -47,12 +48,18 @@ export const TableComponent = (props) => {
           })}
         </tbody>
       </table>
-      <PaginationComponent
-        pageSize={pageSize}
-        current={current}
-        total={tableData && tableData.length}
-        onChange={handlePagination}
-      />
+      <div
+        style={{
+          marginLeft: "400px"
+        }}
+      >
+        <PaginationComponent
+          pageSize={pageSize}
+          current={current}
+          total={tableData && tableData.length}
+          onChange={handlePagination}
+        />
+      </div>
     </Fragment>
   );
 };

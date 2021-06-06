@@ -7,6 +7,8 @@
   pointer-events: none;
 }
 
+@import '~antd/dist/antd.css';
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +37,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+#example {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#example td, #example th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#example tr:nth-child(even){background-color: #f2f2f2;}
+
+#example tr:hover {background-color: #ddd;}
+
+#example th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }

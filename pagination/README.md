@@ -17,3 +17,6 @@ Mention above are the most basic props to run this component. Mention below are 
 
 1. disable - Disables the pagination - Boolean - Default is false
 2. hideOnSinglePage - Specify the sizeChanger options - Sting [] - [10, 20, 50, 100]
+
+Add following code to App.css
+@import '~antd/dist/antd.css';
